@@ -45,7 +45,7 @@ Please ensure that the MySQL server is running and the database connection detai
 ## Contributors
 
 - [SwiTzeX](https://github.com/SwiTzeX)
-- [MythX](https://github.com/MythX7)
+- [MythX](https://github.com/MythX744) 
 - [sk-sql](https://github.com/sk-ql)
 - [abdouhanafi](https://github.com/abdouhanafi)
 - [ghali10](https://github.com/ghali10)
