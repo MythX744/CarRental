@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.carrental.customnodes.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #6279FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrental.RegisterController">
+   <children>
+      <HBox prefHeight="800.0" prefWidth="1400.0">
+         <children>
+            <Pane prefHeight="800.0" prefWidth="554.0" style="-fx-background-color: #6279FF;">
+               <children>
+                  <ImageView fitHeight="800.0" fitWidth="590.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo/New%20logos/qq.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="330.0" layoutY="220.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label layoutX="101.0" layoutY="594.0" prefHeight="77.0" prefWidth="358.0" text="The best cars at your" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="649.0" prefHeight="51.0" prefWidth="200.0" text="door steps" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="696.0" prefHeight="20.0" prefWidth="303.0" text="Rent the latest model cars at cheap price" textFill="WHITE" />
+                  <ImageView fitHeight="66.0" fitWidth="101.0" layoutX="439.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo/New%20logos/logo%20car%20only%20colored%20background%202.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <VBox alignment="CENTER" prefHeight="800.0" prefWidth="847.0" spacing="40.0" style="-fx-background-radius: 30 0 0 30; -fx-background-color: #ffffff;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="384.0" text="Create Account" textAlignment="CENTER" textFill="black">
+                     <font>
+                        <Font name="Poppins" size="43.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <MyTextField fx:id="fullnameid" prefHeight="25.0" prefWidth="500.0" promptText="Full Name">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyTextField>
+                  <MyTextField fx:id="ageid" prefWidth="500.0" promptText="Age">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyTextField>
+                  <MyTextField fx:id="phonenumid" prefWidth="500.0" promptText="Phone Number">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyTextField>
+                  <MyTextField fx:id="Nid" prefWidth="500.0" promptText="National ID">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyTextField>
+                  <MyTextField fx:id="mailid" prefWidth="500.0" promptText="Email Address">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyTextField>
+                  <MyPasswordField fx:id="passwordid" prefWidth="500.0" promptText="Password">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyPasswordField>
+                  <MyPasswordField fx:id="Vpasswordid" prefWidth="500.0" promptText="Comfirm Your Password">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </MyPasswordField>
+                  <VBox alignment="CENTER" prefHeight="30.0" prefWidth="891.0" spacing="5.0">
+                     <children>
+                        <MyButton fx:id="register" mnemonicParsing="false" onAction="#register" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #6279FF; -fx-background-radius: 15;" text="Create Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </MyButton>
+                        <HBox alignment="CENTER" prefHeight="4.0" prefWidth="891.0" spacing="5.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Already have an account?" textAlignment="CENTER" textFill="#353550">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="loginbtn" onMouseClicked="#goToLogin" text="Login" textFill="#6279ff">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <MyButton onAction="#homeButton" layoutX="1320.0" layoutY="29.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: #6279ff; -fx-background-radius: 8; -fx-text-fill: #ffffff;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MyButton>
+   </children>
+</AnchorPane>

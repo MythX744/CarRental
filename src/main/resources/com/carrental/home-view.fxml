@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import com.carrental.customnodes.MyTextField?>
+<?import com.carrental.customnodes.MyDatePicker?>
+<?import com.carrental.customnodes.MyTimePicker?>
+<?import com.carrental.customnodes.MyButton?>
+<VBox fx:id="mainBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1400.0" spacing="10.0" style="-fx-background-color: #F6F8FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrental.HomeController">
+   <HBox fx:id="searchBox" alignment="CENTER" layoutX="50.0" layoutY="79.0" prefHeight="107.0" prefWidth="1306.0" spacing="3.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #f0f2ff; -fx-background-radius: 30; -fx-border-radius: 30;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="44.0">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="311.0" spacing="10.0" style="-fx-background-color: 000000; -fx-background-radius: 8 2 2 8;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </HBox.margin>
+         <ImageView fx:id="locIcon" fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@icons/loc.png" />
+         </ImageView>
+         <MyTextField fx:id="locationTF" layoutX="47.0" layoutY="10.0" prefHeight="67.0" prefWidth="292.0" promptText="Pickup Location" promptFontSize="15" inputFontSize="15"/>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="478.0" layoutY="30.0" prefHeight="67.0" prefWidth="406.0" spacing="10.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 2;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/calendar.png" />
+               </image>
+            </ImageView>
+            <MyDatePicker fx:id="pickupDateTF" layoutX="47.0" layoutY="10.0" prefHeight="67.0" prefWidth="190.0" promptText="Pickup Date" promptFontSize="15" inputFontSize="15"/>
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="46.0" prefWidth="5.0" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="20.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/stopwatch.png" />
+               </image>
+            </ImageView>
+            <MyTimePicker fx:id="pickupTimeTF" layoutX="47.0" layoutY="10.0" prefHeight="67.0" prefWidth="190.0" promptText="Pickup Time" promptFontSize="15" inputFontSize="15"/>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </HBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="532.0" layoutY="30.0" prefHeight="67.0" prefWidth="406.0" spacing="10.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 2 8 8 2;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/calendar.png" />
+               </image>
+            </ImageView>
+            <MyDatePicker fx:id="returnDateTF" layoutX="47.0" layoutY="10.0" prefHeight="67.0" prefWidth="190.0" promptText="Return Date" promptFontSize="15" inputFontSize="15"/>
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="46.0" prefWidth="5.0" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="20.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/stopwatch.png" />
+               </image>
+            </ImageView>
+            <MyTimePicker fx:id="returnTimeTF" layoutX="47.0" layoutY="10.0" prefHeight="67.0" prefWidth="190.0" promptText="Return Time" promptFontSize="15" inputFontSize="15"/>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="20.0" left="5.0" top="20.0" />
+         </HBox.margin>
+      </HBox>
+      <MyButton fx:id="searchBtn" onAction="#filterVehicles" mnemonicParsing="false" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: #6279ff; -fx-background-radius: 8;" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0">
+               <image>
+                  <Image url="@icons/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <HBox.margin>
+            <Insets left="6.0" />
+         </HBox.margin>
+      </MyButton>
+      <fx:define>
+         <Image fx:id="btnImage" url="@icons/search.png" />
+      </fx:define>
+
+
+   </HBox>
+   <VBox fx:id="vehicleCardsBox" layoutX="50.0" layoutY="200.0" prefHeight="571.0" prefWidth="1306.0" style="-fx-border-color: #f0f2ff; -fx-border-radius: 30; -fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="200.0">
+      <children>
+         <HBox fx:id="filtersBox" prefHeight="61.0" prefWidth="1304.0" spacing="20.0">
+            <children>
+               <ComboBox fx:id="gearDropList" onAction="#filterVehicles" prefHeight="37.0" prefWidth="116.0" promptText="Gear Type" styleClass="menu" stylesheets="@style/menu.css">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+               </ComboBox>
+               <ComboBox fx:id="fuelDropList" layoutX="40.0" layoutY="25.0" onAction="#filterVehicles" prefHeight="37.0" prefWidth="113.0" promptText="Fuel Type" styleClass="menu" stylesheets="@style/menu.css">
+                  <items>
+                  </items>
+               </ComboBox>
+               <ComboBox fx:id="brandsDropList" layoutX="159.0" layoutY="25.0" onAction="#filterVehicles" prefHeight="37.0" prefWidth="99.0" promptText="Brands" styleClass="menu" stylesheets="@style/menu.css">
+                  <items>
+                  </items>
+               </ComboBox>
+               <ComboBox fx:id="colorsDropList" layoutX="289.0" layoutY="25.0" onAction="#filterVehicles" prefHeight="37.0" prefWidth="97.0" promptText="Colors" styleClass="menu" stylesheets="@style/menu.css">
+                  <items>
+                  </items>
+               </ComboBox>
+               <ComboBox fx:id="typeDropList" layoutX="159.0" layoutY="25.0" onAction="#filterVehicles" prefHeight="37.0" prefWidth="89.0" promptText="Class" styleClass="menu" stylesheets="@style/menu.css">
+                  <items>
+                  </items>
+               </ComboBox>
+               <Button fx:id="clearFilterButton" mnemonicParsing="false" onAction="#clearAllFilters" prefHeight="37.0" prefWidth="98.0" style="-fx-border-color: #d0d4de; -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 10; -fx-background-color: #F6F8FF;" stylesheets="@style/menu.css" text="Clear All Filter" />
+            </children>
+            <padding>
+               <Insets left="30.0" right="30.0" top="15.0" />
+            </padding>
+         </HBox>
+         <VBox prefHeight="509.0" prefWidth="1304.0" spacing="4.0">
+            <padding>
+               <Insets left="30.0" right="30.0" />
+            </padding>
+            <children>
+               <HBox prefHeight="32.0" prefWidth="1244.0">
+                  <children>
+                     <Label fx:id="totalVeh" text="X Vehicle found" textFill="#353550">
+                        <font>
+                           <Font name="Arial Bold" size="36.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox fx:id="cardLayout" prefHeight="430.0" prefWidth="1244.0" spacing="15.0" />
+               <HBox fx:id="paginationBox" alignment="CENTER" prefHeight="5.0" prefWidth="1244.0" spacing="5.0">
+                  <children>
+                     <Button fx:id="previousPageButton" mnemonicParsing="false" onAction="#previousPageDisplay" style="-fx-background-color: #ebeeff; -fx-background-radius: 5; -fx-border-color: #6279ff; -fx-border-radius: 5;" text="&lt;" textFill="#6279ff">
+                        <font>
+                           <Font name="Arial Bold" size="12.0" />
+                        </font>
+                     </Button>
+                     <Label fx:id="pageNumberLabel" text="1" textFill="#6279ff">
+                        <font>
+                           <Font name="Arial" size="17.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="nextPageButton" layoutX="592.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextPageDisplay" style="-fx-background-color: #ebeeff; -fx-background-radius: 5; -fx-border-color: #6279ff; -fx-border-radius: 5;" text="&gt;" textFill="#6279ff">
+                        <font>
+                           <Font name="Arial Bold" size="12.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </HBox>
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </VBox>
+      </children>
+   </VBox>
+   <Label alignment="BOTTOM_CENTER" layoutX="575.0" layoutY="771.0" text="Copyright © UIR Project 2022-2023 " textFill="#6279ff" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="575.0" AnchorPane.rightAnchor="568.0" AnchorPane.topAnchor="771.0">
+      <font>
+         <Font name="Arial" size="16.0" />
+      </font>
+   </Label>
+   <padding>
+      <Insets left="50.0" right="50.0" top="20.0" />
+   </padding>
+</VBox>
